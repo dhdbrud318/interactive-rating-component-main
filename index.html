@@ -11,50 +11,51 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
 
     <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section id="rating-section">
+    <!-- Rating state start -->
+
+    <form action="#" class="container" id="rating">
       <div class="star-icon center">
-        <img src="images/icon-star.svg" alt="star icon" />
+        <img src="images/icon-star.svg" alt="Star Icon" />
       </div>
-      <div class="text-row margin-top">
+      <div class="text-row">
         <h1>How did we do?</h1>
         <p>
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
       </div>
-      <ul class="score-row margin-top">
-        <li id="rating" class="center" value="1" tabindex="-1">1</li>
-        <li id="rating" class="center" value="2" tabindex="-1">2</li>
-        <li id="rating" class="center" value="3" tabindex="-1">3</li>
-        <li id="rating" class="center" value="4" tabindex="-1">4</li>
-        <li id="rating" class="center" value="5" tabindex="-1">5</li>
-      </ul>
-      <button id="submit" class="margin-top">Submit</button>
-    </section>
+      <div class="rating-row">
+        <input type="radio" id="one" name='rating-score' value="1" />
+        <label for="one" class="center">1</label>
+        <input type="radio" id="two" name='rating-score' value="2" />
+        <label for="two" class="center">2</label>
+        <input type="radio" id="three" name='rating-score' value="3" />
+        <label for="three" class="center">3</label>
+        <input type="radio" id="four" name='rating-score' value="4" />
+        <label for="four" class="center">4</label>
+        <input type="radio" id="five" name='rating-score' value="5" />
+        <label for="five" class="center">5</label>
+      </div>
+
+      <button disabled>Submit</button>
+    </form>
 
     <!-- Thank you state start -->
-
-    <section id="thankyou-section">
-      <div class="img-row">
-        <img src="images/illustration-thank-you.svg" alt="Thank you" />
+    <section id="thankyou" class="container disappear">
+      <div class="thankyou-img center">
+        <img src="images/illustration-thank-you.svg" alt="" />
       </div>
-      <div class="user-score-row margin-top">
-        You selected <span id="user-score">nope</span> out of 5
+      <div class="selected-score">
+        You selected <span id="user-rating"></span> out of 5
       </div>
-      <div class="text-row margin-top">
-        <h1>Thank You!</h1>
+      <div class="text-row align-center">
+        <h2>Thank you!</h1>
         <p>
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
@@ -62,9 +63,9 @@
       </div>
     </section>
 
-    <!-- Thank you state end -->
+    <!-- Add rating here -->
 
-    <p class="attribution margin-top">Coded by Yoo Keoung Oh</p>
+    <!-- Thank you state end -->
 
     <script src="script.js"></script>
   </body>
